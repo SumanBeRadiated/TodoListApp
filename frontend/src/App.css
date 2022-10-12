@@ -1,0 +1,538 @@
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #39364b;
+  padding: 1px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1f1d27;
+  border-radius: 20px;
+  border: 2px solid #39364b;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #0e1122;
+}
+
+body {
+  background: #282633;
+  letter-spacing: 2px;
+  color: #e0e0e0;
+}
+
+.section {
+  margin: 1.6em;
+}
+
+.header-title h1,
+.header-title p {
+  color: #e0e0e0;
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 18px;
+}
+
+.add-item-fields {
+  width: 50%;
+  margin: 1em auto;
+}
+
+.add-item-fields form {
+  display: flex;
+  gap: 0.3em;
+  justify-content: space-evenly;
+}
+.add-item-fields select,
+.add-item-fields input,
+.add-item-fields button {
+  height: 2.5rem;
+  border-radius: 10px;
+  border-width: 0;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1rem;
+  padding-left: 1em;
+}
+.cat-selector {
+  display: flex;
+  gap: 0.3em;
+  width: 32%;
+  padding: 0;
+}
+.add-item-fields select {
+  width: 100%;
+
+  background-color: #5e75f5;
+  color: #e0e0e0;
+}
+
+.add-item-fields input {
+  width: 42%;
+  background-color: #e0e0e0;
+}
+
+.add-item-fields button {
+  padding: 5px;
+  background-color: #5e75f5;
+  width: 20%;
+  color: #e0e0e0;
+}
+
+.list-body {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 100%;
+  background-color: #363449;
+  padding: 1.5em;
+  border-radius: 100px;
+  margin: 0 auto;
+}
+
+.category-list {
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+  gap: 1em;
+  width: 20%;
+  margin: 3em 0 6em 8em;
+}
+
+.list-item {
+  margin-top: 0.6em;
+  margin-right: 5em;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  height: fit-content;
+  width: 40%;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: flex-end;
+}
+.category-item i {
+  font-size: 1.2rem;
+  color: rgb(236, 97, 97);
+  vertical-align: middle;
+}
+.category-item i:hover {
+  color: rgb(241, 148, 148);
+}
+
+.todoItem {
+  display: flex;
+  font-size: 1.7rem;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: #5e75f5 2px solid;
+  color: #cab0b0;
+  margin-bottom: 1em;
+  padding-bottom: 0.3em;
+  background-color: none;
+
+  border-width: none;
+  transition: background-color 1s ease-in-out, height 1s ease-in-out;
+}
+
+.todo-deleting {
+  animation: todo-deleting 0.5s 1s ease-in-out forwards;
+}
+
+@keyframes todo-deleting {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+  }
+}
+
+.todoItemAdded {
+  animation: todoItemAdding 0.35s ease-in-out forwards;
+}
+
+@keyframes todoItemAdding {
+  0% {
+    opacity: 0;
+    font-size: 0px;
+  }
+
+  50% {
+    background-color: #445679;
+  }
+
+  100% {
+    opacity: 1;
+    background-color: none;
+    font-size: 1.7rem;
+  }
+}
+
+.signup-box {
+  width: 40%;
+  position: fixed;
+  top: 50%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, left 0.5s;
+  transform: translate(-50%, -50%);
+  background-color: #343049;
+  border-radius: 25px;
+  padding: 2rem 6rem;
+  color: #e0e0e0;
+}
+
+.signup-box-trans {
+  left: 50%;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s, left 0.5s;
+}
+
+.signup-box label {
+  display: block;
+  margin-bottom: 0.6em;
+  font-size: 1.1rem;
+}
+
+.signup-box div {
+  margin: 0.8em 0;
+}
+
+.signup-box input {
+  height: 2.2rem;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border-width: 0;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 0.1em 0.1em 0.1em 0.8em;
+
+  background-color: #e0e0e0;
+
+  font-size: 18px;
+}
+
+.signup-box form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.signup-box input[type="submit"] {
+  margin-top: 0.4em;
+  height: 3rem;
+  width: 50%;
+  background-color: #5e75f5;
+  transition: background-color 0.2s;
+  color: #e0e0e0;
+  border-radius: 10px;
+  border-width: 0;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-box input[type="submit"]:hover {
+  background-color: #788bf8;
+}
+
+.signup-box input[type="submit"]:active {
+  background-color: #4e64e2;
+}
+
+.dark-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.25);
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  cursor: pointer;
+}
+
+.header-nav {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  vertical-align: middle;
+  top: 10%;
+  left: 3%;
+}
+
+.header-nav span {
+  margin-bottom: 0.4em;
+}
+
+.header-nav span a,
+.header-nav span a:visited {
+  color: #e0e0e0;
+  letter-spacing: 1.8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.header-nav span a i {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 0.6rem;
+}
+
+/* .error {
+  position: fixed;
+  top: 2%;
+  right: 4%;
+
+  background-color: rgb(221, 77, 77);
+  border: 1px solid rgb(172, 83, 83);
+  border-radius: 8px;
+  font-size: 14px;
+  width: fit-content;
+  padding: 10px 25px;
+} */
+.error {
+  position: fixed;
+  top: 2%;
+  right: 4%;
+  color: rgb(255, 107, 107);
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: fit-content;
+  letter-spacing: 1px;
+}
+
+.profile-container {
+  width: 30%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.profile-container table td {
+  width: 100%;
+  padding-bottom: 1em;
+  height: 1.5em;
+}
+
+.profile-container input {
+  margin: 0;
+  width: 90%;
+  height: 1.35rem;
+
+  padding: 0.5em;
+  background-color: #e0e0e0;
+  border: 0;
+  border-radius: 5px;
+}
+
+/* .profile-container table th {
+  width: 111px;
+} */
+
+.loading-overlay {
+  text-align: center;
+}
+
+.loading-overlay img {
+  width: 6rem;
+}
+
+.list-body .loading-overlay img {
+  width: 3rem;
+  height: auto;
+}
+
+.signup-to-add {
+  padding: 1em 0;
+  font-size: 1rem;
+}
+
+.signup-to-add a {
+  color: #bdc7ff;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.signup-to-add a:hover {
+  color: #8093ff;
+}
+
+.profile-container img {
+  width: 5rem;
+}
+
+a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.strike {
+  height: 3px;
+  width: 100%;
+  background-color: #fa0606;
+  margin-top: -0.6em;
+}
+
+.check-todo a {
+  color: rgb(169, 224, 87);
+}
+
+.striked {
+  width: 100%;
+  transition: width;
+}
+
+.striking {
+  animation: striking 0.5s forwards ease-in-out;
+}
+.unstriking {
+  animation: unstriking 1s forwards;
+}
+
+@keyframes striking {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes unstriking {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.unstriked {
+  width: 0%;
+}
+
+a i {
+  vertical-align: -webkit-baseline-middle;
+}
+
+.profile-container button {
+  height: 2.5rem;
+  width: 50%;
+  background-color: #5e75f5;
+  transition: background-color 0.2s;
+  color: #e0e0e0;
+  border-radius: 10px;
+  border-width: 0;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.list-status {
+  width: 100%;
+}
+.list-status div {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.list-status i {
+  vertical-align: middle;
+  color: rgb(236, 97, 97);
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  padding: 2em 0;
+}
+
+@media (max-width: 390px) {
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: static;
+    margin-bottom: 0;
+  }
+
+  .section {
+    margin: 1em inherit;
+  }
+
+  .header-title h1,
+  .header-title p {
+    font-size: 1rem;
+  }
+
+  .add-item-fields form {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .add-item-fields {
+    width: 80%;
+  }
+
+  .add-item-fields select {
+    width: 80%;
+    margin-right: 0.3em;
+  }
+  .add-item-fields input {
+    width: 80%;
+  }
+
+  .list-body {
+    flex-direction: column;
+    border-radius: 0;
+    width: 70%;
+  }
+
+  .category-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5em;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+
+    border-bottom: #5e75f5 dashed 5px;
+  }
+
+  .list-item {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.5rem;
+  }
+  .cat-selector {
+    width: 100%;
+  }
+
+  .profile-container {
+    width: 80%;
+  }
+
+  .signup-box {
+    padding: 0.5em 0;
+    width: 80%;
+  }
+
+  .signup-box input {
+    width: 90%;
+  }
+}
